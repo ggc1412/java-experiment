@@ -1,4 +1,4 @@
-package org.example;
+package org.example.volatileTest;
 
 public class StaticVolatile {
     private static volatile int sharedCounter = 0;
