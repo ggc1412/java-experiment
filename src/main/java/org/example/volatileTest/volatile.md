@@ -46,18 +46,18 @@ public class Volatile {
 알아본 최적화 사항은 다음과 같다.
 
 1. JMM(Java Memory Model)의 발전
-   Java 5 이후로 JMM이 크게 개선되어 멀티스레딩 환경에서의 메모리 가시성과 순서 보장을 강화하였다.
+   - Java 5 이후로 JMM이 크게 개선되어 멀티스레딩 환경에서의 메모리 가시성과 순서 보장을 강화하였다.
 2. JIT(Just-In-Time) 컴파일러의 최적화
-   현대 JVM의 JIT 컴파일러는 코드 실행 패턴을 분석하고 최적화한다. 특정 상황에서는 메모리 배리어를 자동으로 삽입한다.
+   - 현대 JVM의 JIT 컴파일러는 코드 실행 패턴을 분석하고 최적화한다. 특정 상황에서는 메모리 배리어를 자동으로 삽입한다.
 3. 하드웨어 레벨의 메모리 모델 개선
-   최신 CPU 아키텍처는 메모리 일관성 모델을 제공한다. 이는 소프트웨어 레벨의 동기화 없이도 일부 동시성 문제를 해결할 수 있게 한다.
+   - 최신 CPU 아키텍처는 메모리 일관성 모델을 제공한다. 이는 소프트웨어 레벨의 동기화 없이도 일부 동시성 문제를 해결할 수 있게 한다.
 4. Happens-Before 관계의 확장:
-   JVM 구현이 발전하면서, 일부 동작에 대해 추가적인 Happens-Before 관계가 정의되었다. 이로 인해 명시적인 volatile 선언 없이도 메모리 가시성이 보장되는 경우가 늘어났다.
+   - JVM 구현이 발전하면서, 일부 동작에 대해 추가적인 Happens-Before 관계가 정의되었다. 이로 인해 명시적인 volatile 선언 없이도 메모리 가시성이 보장되는 경우가 늘어났다.
 
 최적화가 되었다고는 하지만 volatile을 사용하는 것이 JMM에 의해 명시적으로 보장된 동작을 얻을 수 있으므로 가장 안전하고 명확한 방법이다.
 
-[Java Volatile Keyword](https://jenkov.com/tutorials/java-concurrency/volatile.html)
-[Guide to the Volatile Keyword in Java | Baeldung](https://www.baeldung.com/java-volatile)
+- [Java Volatile Keyword](https://jenkov.com/tutorials/java-concurrency/volatile.html)
+- [Guide to the Volatile Keyword in Java | Baeldung](https://www.baeldung.com/java-volatile)
 
 > **JIT(Just-In-Time)**
 초기 JVM은 인터프리터 방식망 이용하여 한줄 한줄 읽기 때문에 실행속도가 느린 단점이 있었지만, JIT 컴파일러 방식을 도입해 속도를 보완하였다.
