@@ -56,6 +56,9 @@ public class Volatile {
 
 최적화가 되었다고는 하지만 volatile을 사용하는 것이 JMM에 의해 명시적으로 보장된 동작을 얻을 수 있으므로 가장 안전하고 명확한 방법이다.
 
+[Java Volatile Keyword](https://jenkov.com/tutorials/java-concurrency/volatile.html)
+[Guide to the Volatile Keyword in Java | Baeldung](https://www.baeldung.com/java-volatile)
+
 > **JIT(Just-In-Time)**
 초기 JVM은 인터프리터 방식망 이용하여 한줄 한줄 읽기 때문에 실행속도가 느린 단점이 있었지만, JIT 컴파일러 방식을 도입해 속도를 보완하였다.
 JIT는 실행 시점에서 인터프리트 방식으로 기계어 코드를 생성하면서 그 코드를 캐싱하여, 같은 함수가 여러 번 불릴 때 매번 기계어 코드를 생성하는 것을 방지한다.
